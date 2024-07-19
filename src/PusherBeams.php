@@ -61,15 +61,9 @@ class PusherBeams
                 );
             }
         } catch (\Exception $e) {
-            if (app()::VERSION < '5.8') {
-                $this->events->fire(
-                    new NotificationFailed($notifiable, $notification, 'pusher-beams')
-                );
-            } else {
-                $this->events->dispatch(
-                    new NotificationFailed($notifiable, $notification, 'pusher-beams')
-                );
-            }
+             $this->events->dispatch(
+                new NotificationFailed($notifiable, $notification, 'pusher-beams')
+            );
         }
     }
 
