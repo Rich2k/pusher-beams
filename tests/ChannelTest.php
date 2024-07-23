@@ -14,7 +14,13 @@ use PHPUnit\Framework\TestCase;
 
 class ChannelTest extends TestCase
 {
-    public function setUp()
+    protected PushNotifications $beams;
+    protected Dispatcher $events;
+    protected PusherBeams $channel;
+    protected TestNotification $notification;
+    protected TestNotifiable $notifiable;
+
+    public function setUp(): void
     {
         $this->beams = Mockery::mock(PushNotifications::class);
         $this->events = Mockery::mock(Dispatcher::class);
@@ -23,7 +29,7 @@ class ChannelTest extends TestCase
         $this->notifiable = new TestNotifiable;
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Mockery::close();
         parent::tearDown();
@@ -53,7 +59,7 @@ class TestNotifiable
 {
     use Notifiable;
 
-    public function routeNotificationForPusherBeams()
+    public function routeNotificationForPusherBeams(): string
     {
         return 'interest_name';
     }
@@ -61,7 +67,7 @@ class TestNotifiable
 
 class TestNotification extends Notification
 {
-    public function toPusherBeamsNotification($notifiable)
+    public function toPusherBeamsNotification($notifiable): PusherBeamsMessage
     {
         return new PusherBeamsMessage();
     }

@@ -12,7 +12,7 @@ class MessageTest extends TestCase
     /** @var \Rich2k\PusherBeams\PusherBeamsMessage */
     protected $message;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
