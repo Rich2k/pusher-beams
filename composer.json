@@ -27,10 +27,10 @@
     ],
     "require": {
         "php": ">=8.0",
-        "illuminate/events": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
-        "illuminate/notifications": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
-        "illuminate/queue": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0|| ^11.0",
-        "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+        "illuminate/events": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ~12",
+        "illuminate/notifications": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ~12",
+        "illuminate/queue": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0|| ^11.0 || ~12",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ~12",
         "pusher/pusher-push-notifications": "^2.0"
     },
     "require-dev": {
